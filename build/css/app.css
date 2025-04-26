@@ -504,7 +504,7 @@ body > section {
 }
 .about h2 {
   font-size: 3.5rem;
-  margin-bottom: 4rem;
+  margin: 6rem 0;
   color: #752F97;
   position: relative;
   display: inline-block;
@@ -585,7 +585,7 @@ body > section {
 }
 .tech-section h2 {
   font-size: 3.5rem;
-  margin-bottom: 4rem;
+  margin: 6rem 0;
   color: #752F97;
   position: relative;
   display: inline-block;
@@ -753,7 +753,7 @@ body > section {
 }
 .projects-container h2 {
   font-size: 3.5rem;
-  margin-bottom: 4rem;
+  margin: 6rem, 0;
   color: #752F97;
   position: relative;
   display: inline-block;
