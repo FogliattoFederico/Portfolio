@@ -107,12 +107,3 @@ function mostrarModal() {
     });
   });
 }
-
-// Helper function to close modal with animation
-function closeModal(modal) {
-  modal.classList.add("fade-out");
-  setTimeout(() => {
-    modal.remove();
-    document.body.classList.remove("overflow-hidden");
-  }, 500);
-}
