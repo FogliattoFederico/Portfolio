@@ -1,0 +1,150 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-formulario {
+    background-color: v.$morado;
+    padding: 3rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    margin: 5rem 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  
+    
+    @include m.tablet{
+        width: 65%;
+        margin: 9rem auto;
+    }
+
+    @include m.deskstop{
+        width: 45%;
+        margin: 9 auto;
+    }
+
+    h2{
+        font-weight: 600;
+        text-align: center;
+        font-size:  3.5rem;
+    }
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.formulario {
+
+    .input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+
+        .input__label{
+            font-weight: 500;
+            @include m.tablet{
+                width: 90%;
+                margin: 0 auto;
+ 
+             }
+             @include m.deskstop{
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+
+        .input__campo {
+            padding: 1rem;
+            border-radius: 1rem;
+
+            @include m.tablet{
+               width: 90%;
+               margin: 0 auto;
+
+            }
+            @include m.deskstop{
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+
+        textarea {
+            height: 15rem;
+            width: 100%;
+            resize: none;
+        }
+    }
+
+    .botones {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        width: 100%;
+
+        @include m.tablet{
+            width: 90%;
+            margin: 0 auto;
+            
+         }
+         @include m.deskstop{
+             width: 70%;
+             margin: 0 auto;
+         }
+
+        .btn-submit,
+        .btn-reset {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            height: auto;
+            width: 45%;
+            border-radius: 1rem;
+            cursor: pointer;
+            svg {
+                height: 3rem;
+            }
+        }
+
+        .btn-submit {
+            background-color: v.$rosa;
+            color: white;
+            
+        }
+
+        .opacity {
+            opacity: 0.4;
+            cursor: not-allowed
+        }
+    }
+
+}
+
+
+.alertaError{
+    background-color: red;
+    color: v.$blanco;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    border-radius: 1rem;
+    margin: 0 auto;
+
+    @include m.tablet{
+        width: 90%;
+    }
+    @include m.deskstop{
+        width: 70%;
+    }
+}
+
+.alertaExito{
+    background-color: v.$verde;
+    padding: 1rem;
+    text-align: center;
+    color: v.$blanco;
+    width: auto;
+    border-radius: 1rem;
+}

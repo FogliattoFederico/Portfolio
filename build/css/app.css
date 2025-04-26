@@ -889,3 +889,251 @@ body > section {
     opacity: 0.7;
   }
 }
+.contenedor-formulario {
+  background-color: #752F97;
+  padding: 3rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  margin: 5rem 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px) {
+  .contenedor-formulario {
+    width: 65%;
+    margin: 9rem auto;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor-formulario {
+    width: 45%;
+    margin: 9 auto;
+  }
+}
+.contenedor-formulario h2 {
+  font-weight: 600;
+  text-align: center;
+  font-size: 3.5rem;
+}
+.contenedor-formulario .formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario .input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+.formulario .input .input__label {
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .formulario .input .input__label {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .formulario .input .input__label {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.formulario .input .input__campo {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+@media (min-width: 768px) {
+  .formulario .input .input__campo {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .formulario .input .input__campo {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.formulario .input textarea {
+  height: 15rem;
+  width: 100%;
+  resize: none;
+}
+.formulario .botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .formulario .botones {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .formulario .botones {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.formulario .botones .btn-submit,
+.formulario .botones .btn-reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  height: auto;
+  width: 45%;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.formulario .botones .btn-submit svg,
+.formulario .botones .btn-reset svg {
+  height: 3rem;
+}
+.formulario .botones .btn-submit {
+  background-color: #F53756;
+  color: white;
+}
+.formulario .botones .opacity {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.alertaError {
+  background-color: red;
+  color: #FFFFFF;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .alertaError {
+    width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  .alertaError {
+    width: 70%;
+  }
+}
+
+.alertaExito {
+  background-color: #4CB8B3;
+  padding: 1rem;
+  text-align: center;
+  color: #FFFFFF;
+  width: auto;
+  border-radius: 1rem;
+}
+
+.sk-chase {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  animation: sk-chase 2.5s infinite linear both;
+}
+
+.sk-chase-dot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: sk-chase-dot 2s infinite ease-in-out both;
+}
+
+.sk-chase-dot:before {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 25%;
+  background-color: #4CB8B3;
+  border-radius: 100%;
+  animation: sk-chase-dot-before 2s infinite ease-in-out both;
+}
+
+.sk-chase-dot:nth-child(1) {
+  animation-delay: -1.1s;
+}
+
+.sk-chase-dot:nth-child(2) {
+  animation-delay: -1s;
+}
+
+.sk-chase-dot:nth-child(3) {
+  animation-delay: -0.9s;
+}
+
+.sk-chase-dot:nth-child(4) {
+  animation-delay: -0.8s;
+}
+
+.sk-chase-dot:nth-child(5) {
+  animation-delay: -0.7s;
+}
+
+.sk-chase-dot:nth-child(6) {
+  animation-delay: -0.6s;
+}
+
+.sk-chase-dot:nth-child(1):before {
+  animation-delay: -1.1s;
+}
+
+.sk-chase-dot:nth-child(2):before {
+  animation-delay: -1s;
+}
+
+.sk-chase-dot:nth-child(3):before {
+  animation-delay: -0.9s;
+}
+
+.sk-chase-dot:nth-child(4):before {
+  animation-delay: -0.8s;
+}
+
+.sk-chase-dot:nth-child(5):before {
+  animation-delay: -0.7s;
+}
+
+.sk-chase-dot:nth-child(6):before {
+  animation-delay: -0.6s;
+}
+
+@keyframes sk-chase {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes sk-chase-dot {
+  80%, 100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes sk-chase-dot-before {
+  50% {
+    transform: scale(0.4);
+  }
+  100%, 0% {
+    transform: scale(1);
+  }
+}
+.mostrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.ocultar {
+  display: none;
+}
