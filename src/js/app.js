@@ -70,7 +70,7 @@ function mostrarModal() {
       <iframe 
       width="560" 
       height="315" 
-      src="https://www.youtube.com/embed/gGYvIlU6gAI?autoplay=1&mute=1&enablejsapi=1" 
+      src="https://www.youtube.com/embed/8zX08wngJco?si=65K-rGkG8XvQyeB4" 
       title="YouTube video player" 
       frameborder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -106,4 +106,11 @@ function mostrarModal() {
       }
     });
   });
+}
+function closeModal(modal) {
+  modal.classList.add("fade-out");
+  setTimeout(() => {
+    modal.remove();
+    document.body.classList.remove("overflow-hidden");
+  }, 500);
 }
