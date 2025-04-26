@@ -29,7 +29,11 @@
     }
 
     &__description {
-        text-align: center;
+        text-align: start   ;
         line-height: 4rem;
+
+        @include m.tablet {
+            text-align: justify;
+        }
     }
 }

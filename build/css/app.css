@@ -519,8 +519,13 @@ body > section {
   left: 25%;
 }
 .about__description {
-  text-align: center;
+  text-align: start;
   line-height: 4rem;
+}
+@media (min-width: 768px) {
+  .about__description {
+    text-align: justify;
+  }
 }
 
 .hero {
@@ -535,7 +540,7 @@ body > section {
 .hero .container-hero {
   color: #752F97;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   /*forma actual de agregar la transparencia*/
   top: 0;
   left: 0;
