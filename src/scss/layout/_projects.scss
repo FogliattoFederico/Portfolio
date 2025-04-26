@@ -33,6 +33,10 @@
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+
+    @include m.tablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .project-card {
@@ -140,9 +144,9 @@
 }
 
 @media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+    // .projects-grid {
+    //     grid-template-columns: 1fr;
+    // }
 
     .project-overlay {
         opacity: 1;

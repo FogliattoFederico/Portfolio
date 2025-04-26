@@ -703,6 +703,11 @@ body > section {
   max-width: 1200px;
   margin: 0 auto;
 }
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 .project-card {
   position: relative;
@@ -803,9 +808,6 @@ body > section {
 }
 
 @media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
   .project-overlay {
     opacity: 1;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
