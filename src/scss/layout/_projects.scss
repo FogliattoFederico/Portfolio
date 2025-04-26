@@ -3,14 +3,14 @@
 
 .projects-container {
     text-align: center;
-    
+
     h2 {
         font-size: 3.5rem;
         margin-bottom: 4rem;
         color: v.$morado;
         position: relative;
         display: inline-block;
-        
+
     }
 
     h2::after {
@@ -41,14 +41,16 @@
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    aspect-ratio: 16/9;
+    height: 27rem;
     background: #2c3e50;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
+
 
 .project-image {
     width: 100%;
@@ -66,7 +68,7 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    color: white;
+    color: v.$blanco;
     font-size: 1.5rem;
     margin: 0;
     z-index: 2;
@@ -94,44 +96,46 @@
 
 .project-description {
     margin: 10px 0 15px;
-    font-size: 0.95rem;
-    line-height: 1.4;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: v.$blanco;
 }
 
 .project-tech {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 15px;
-}
 
-.project-tech span {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 5px 12px;
-    border-radius: 20px;
-    margin: 0 8px 8px 0;
-    font-size: 0.8rem;
-    backdrop-filter: blur(5px);
+    span {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 5px 12px;
+        border-radius: 20px;
+        margin: 0 8px 8px 0;
+        font-size: 0.8rem;
+        backdrop-filter: blur(5px);
+    }
 }
 
 .project-links {
     display: flex;
     gap: 15px;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 8px 15px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.15);
+        transition: background 0.3s;
+    }
+
 }
 
-.project-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 8px 15px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.15);
-    transition: background 0.3s;
-}
-
-.project-links a:hover {
+.project-links .project-links a:hover {
     background: rgba(255, 255, 255, 0.3);
 }
 
