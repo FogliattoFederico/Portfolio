@@ -1,0 +1,35 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.about {
+
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+
+    h2 {
+        font-size: 3.5rem;
+        margin-bottom: 4rem;
+        color: v.$morado;
+        position: relative;
+        display: inline-block;
+
+    }
+
+    h2::after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 3px;
+        background: linear-gradient(to right, #3498db, #9b59b6);
+        bottom: -10px;
+        left: 25%;
+    }
+
+    &__description {
+        text-align: center;
+        line-height: 4rem;
+    }
+}

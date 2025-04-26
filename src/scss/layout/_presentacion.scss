@@ -1,0 +1,56 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.hero {
+    background-image: url("/src/img/portada.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80rem;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 2rem;
+
+    .container-hero {
+        color: v.$morado;
+        span{
+            color: v.$amarillo;
+            font-size: 4rem;
+        }
+        
+        @include m.tablet {
+            align-items: end;
+
+            h2 {
+                text-align: end;
+                margin-right: 3rem;
+                width: 50%;
+            }
+        }
+
+        @include m.deskstop {
+            h2 {
+                text-align: start;
+                margin-right: 19rem;
+                width: 60rem;
+
+            }
+        }
+
+        position: absolute;
+        background-color: rgb(0 0 0 / 70%);
+        /*forma actual de agregar la transparencia*/
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+
+        h2 {
+            margin-left: 2rem;
+        }
+    }
+}

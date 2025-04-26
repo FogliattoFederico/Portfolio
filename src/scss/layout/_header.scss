@@ -1,0 +1,127 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    width: 100%;
+    background-color: v.$negro;
+
+    @include m.tablet {
+        &.fixed {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            box-shadow: 0.1rem 0.2rem 0.3rem #333;
+            z-index: 1;
+            height: auto;
+        }
+    }
+}
+
+.container-header {
+    @include m.contenedor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  
+}
+
+.logo {
+    max-width: 6rem;
+    height: auto;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+    
+    @include m.deskstop{
+        gap: 5rem;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: v.$blanco;
+        font-size: 2.3rem;
+        font-weight: 500;
+
+        &:hover,
+        &.active {
+            color: v.$morado;
+        }
+    }
+}
+
+.open-menu,
+.close-menu {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+
+    .open-menu,
+    .close-menu {
+        display: block;
+        border: 0;
+        font-size: 5rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .open-menu {
+        color: #ececec;
+        left: 15px;
+    }
+
+    .close-menu {
+        color: #ececec;
+        right: 15px;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Inicialmente oculto fuera de la pantalla */
+        width: 300px;
+        height: 100%;
+        background-color: v.$negro;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        overflow-y: auto;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+        /* Transición para posición y opacidad */
+        z-index: 1000;
+
+        &.visible {
+            opacity: 1;
+            /* Hacer visible el menú */
+            visibility: visible;
+            /* Transición gradual para visibilidad */
+            right: 0;
+            /* Deslizar el menú hacia la pantalla */
+        }
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2rem;
+
+        /* Espaciado entre elementos */
+        li a {
+            color: #ececec;
+            font-size: 2rem;
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tech-section {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+
+    h2 {
+        font-size: 3.5rem;
+        margin-bottom: 4rem;
+        color: v.$morado;
+        position: relative;
+        display: inline-block;
+    }
+    
+    h2::after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 3px;
+        background: linear-gradient(to right, #3498db, #9b59b6);
+        bottom: -10px;
+        left: 25%;
+    }
+
+    .tech-slider {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 20px 0;
+    }
+}
+
+.tech-container {
+    display: flex;
+    animation: slide 20s linear infinite;
+    width: calc(200px * 18);
+
+    &:hover {
+        animation-play-state: paused;
+    }
+
+    .tech-item {
+        min-width: 200px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin: 0 10px;
+        padding: 15px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .tech-icon {
+            height: 50px;
+            width: auto;
+            margin-bottom: 10px;
+            object-fit: contain;
+        }
+        
+        .tech-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-top: 10px;
+        }
+
+    }
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 9));
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .tech-item {
+        min-width: 150px;
+        height: 120px;
+    }
+    
+    .tech-icon {
+        height: 40px;
+    }
+    
+    .tech-name {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-item {
+        min-width: 120px;
+        height: 100px;
+        margin: 0 5px;
+        padding: 10px;
+    }
+    
+    .tech-icon {
+        height: 35px;
+        margin-bottom: 5px;
+    }
+    
+    .tech-name {
+        font-size: 0.8rem;
+    }
+}
