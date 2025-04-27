@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   sandwich();
   scrollNav();
   mostrarModal();
+  callToAction();
 });
 
 function sandwich() {
@@ -48,8 +49,40 @@ function scrollNav() {
   });
 }
 
+function callToAction() {
+  const callToAction = document.querySelector("#callToAction"); // Target the <a> element
+
+  if (!callToAction) {
+    console.error("Call to action link not found");
+    return;
+  }
+
+  callToAction.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const targetId = e.currentTarget.getAttribute("href");
+
+    if (!targetId) {
+      console.error("No href attribute found");
+      return;
+    }
+
+    const targetSection = document.querySelector(targetId);
+
+    if (!targetSection) {
+      console.error(`Target section ${targetId} not found`);
+      return;
+    }
+
+    targetSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+}
+
 function mostrarModal() {
-  const demo = document.querySelector("#videoProject1"); 
+  const demo = document.querySelector("#videoProject1");
   demo.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -107,6 +140,7 @@ function mostrarModal() {
     });
   });
 }
+
 function closeModal(modal) {
   modal.classList.add("fade-out");
   setTimeout(() => {
