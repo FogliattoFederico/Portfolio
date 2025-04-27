@@ -1197,8 +1197,6 @@ body > section {
   color: #000000;
   line-height: 1.6;
 }
-
-/* Título principal */
 .project-details h4 {
   color: #2c3e50;
   font-size: 1.5rem;
@@ -1207,15 +1205,13 @@ body > section {
   border-bottom: 2px solid #3498db;
 }
 
-/* Lista ordenada de habilidades */
-.list-soft-skills {
+/* Título principal */
+.project-details .list-soft-skills {
   counter-reset: skill-counter;
   padding-left: 0;
   list-style: none;
 }
-
-/* Items de habilidad */
-.skill-item {
+.project-details .list-soft-skills .skill-item {
   margin-bottom: 1.8rem;
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -1223,14 +1219,7 @@ body > section {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.skill-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Títulos de cada habilidad */
-.skill-item h5 {
+.project-details .list-soft-skills .skill-item h5 {
   color: #3498db;
   font-size: 1.2rem;
   margin-top: 0;
@@ -1238,9 +1227,7 @@ body > section {
   display: flex;
   align-items: center;
 }
-
-/* Numeración personalizada */
-.skill-item h5::before {
+.project-details .list-soft-skills .skill-item h5::before {
   counter-increment: skill-counter;
   content: counter(skill-counter);
   background-color: #3498db;
@@ -1255,7 +1242,14 @@ body > section {
   margin-right: 0.8rem;
   font-size: 1rem;
 }
+.project-details .list-soft-skills .skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
 
+/* Items de habilidad */
+/* Títulos de cada habilidad */
+/* Numeración personalizada */
 /* Lista de detalles de cada habilidad */
 .skill-details {
   padding-left: 2.5rem;
@@ -1286,13 +1280,11 @@ body > section {
   margin-top: 2rem;
   border-radius: 0 8px 8px 0;
 }
-
 .outcome h5 {
   color: #2c3e50;
   margin-top: 0;
   font-size: 1.2rem;
 }
-
 .outcome p {
   margin-bottom: 0;
 }
