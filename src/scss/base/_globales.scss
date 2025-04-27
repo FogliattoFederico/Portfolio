@@ -17,12 +17,8 @@ body {
     font-style: normal;
     color: v.$blanco;
     font-size: 2rem;
-    background-color: v.$negro;
-    /*background-image: url("/src/img/foto2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 100rem;*/
+    background-color: v.$color8;
+    
 
     &.overflow-hidden{
         overflow: hidden;
@@ -50,6 +46,7 @@ h1 {
 }
 h2 {
     font-size: 4.6rem;
+    color: v.$rosa  ;
 }
 h3 {
     font-size: 6rem;

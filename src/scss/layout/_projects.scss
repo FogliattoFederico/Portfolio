@@ -3,11 +3,11 @@
 
 .projects-container {
     text-align: center;
-    padding: 4rem;
+    padding: 1rem 0;
+    
     h2 {
         font-size: 3.5rem;
         margin: 6rem, 0;
-        color: v.$morado;
         position: relative;
         display: inline-block;
         padding-top: 4rem;
@@ -43,7 +43,7 @@
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    height: 27rem;
+    height: 30rem;
     background: #2c3e50;
 
     &:hover {

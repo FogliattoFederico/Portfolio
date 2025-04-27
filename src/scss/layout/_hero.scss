@@ -64,9 +64,10 @@
         }
 
         button {
-            background-color: v.$morado;
+            background-color: v.$rosa;
             color: v.$amarillo;
             font-size: 2rem;
+            font-weight: 600;
             padding: 1rem 2rem;
             border-radius: 1rem;
             border: none;
@@ -78,14 +79,14 @@
                 background-color: v.$amarillo;
 
                 a {
-                    color: v.$morado;
+                    color: v.$rosa;
                 }
 
                 transform: scale(1.05);
             }
 
             a {
-                color: v.$amarillo;
+                color: v.$negro;
             }
         }
     }

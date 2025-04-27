@@ -1,0 +1,26 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer{
+    background-color: v.$negro;
+    height: 15rem;
+    
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+    margin: 0;
+    padding: 5rem;
+}
+li{
+    list-style: none;
+
+    img{
+        width: 5rem;
+        height: 5rem;
+    }
+}
