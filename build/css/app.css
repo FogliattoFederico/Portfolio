@@ -894,7 +894,6 @@ body > section {
   padding: 3rem;
   margin-top: 2rem;
   border-radius: 1rem;
-  margin: 5rem 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 768px) {
@@ -1136,4 +1135,187 @@ body > section {
 
 .ocultar {
   display: none;
+}
+
+.soft-skills {
+  text-align: center;
+}
+.soft-skills h2 {
+  font-size: 3.5rem;
+  margin: 6rem, 0;
+  color: #752F97;
+  position: relative;
+  display: inline-block;
+}
+.soft-skills h2::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(to right, #3498db, #9b59b6);
+  bottom: -10px;
+  left: 25%;
+}
+.soft-skills .list-soft-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.context {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.context h5 {
+  color: #FFFFFF;
+  font-size: 3rem;
+  text-align: center;
+}
+.context p {
+  text-align: center;
+  max-width: 100rem;
+}
+@media (min-width: 768px) {
+  .context p {
+    text-align: justify;
+  }
+}
+.context strong {
+  color: #0a70d5;
+  font-size: 2.5rem;
+}
+
+/* Estilos generales para la sección */
+.project-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* Título principal */
+.project-details h4 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #3498db;
+}
+
+/* Lista ordenada de habilidades */
+.list-soft-skills {
+  counter-reset: skill-counter;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Items de habilidad */
+.skill-item {
+  margin-bottom: 1.8rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos de cada habilidad */
+.skill-item h5 {
+  color: #3498db;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Numeración personalizada */
+.skill-item h5::before {
+  counter-increment: skill-counter;
+  content: counter(skill-counter);
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+  font-size: 1rem;
+}
+
+/* Lista de detalles de cada habilidad */
+.skill-details {
+  padding-left: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.skill-details li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.2rem;
+  list-style-type: none;
+}
+
+/* Viñetas personalizadas */
+.skill-details li::before {
+  content: "•";
+  color: #3498db;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Sección de resultados */
+.outcome {
+  background-color: #e8f4fc;
+  border-left: 4px solid #3498db;
+  padding: 1.2rem;
+  margin-top: 2rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.outcome h5 {
+  color: #2c3e50;
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.outcome p {
+  margin-bottom: 0;
+}
+
+/* Efectos de hover para interactividad */
+.skill-details li:hover::before {
+  color: #e74c3c;
+  transform: scale(1.3);
+  transition: all 0.2s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .project-details {
+    padding: 1rem;
+  }
+  .skill-item {
+    padding: 1rem;
+  }
+  .skill-details {
+    padding-left: 1.5rem;
+  }
+}
+.context p {
+  color: #FFFFFF;
 }
