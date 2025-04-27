@@ -4,10 +4,11 @@
 .soft-skills {
 
     text-align: center;
+    padding: 5rem;
 
     h2 {
         font-size: 3.5rem;
-        margin: 6rem, 0;
+        margin-bottom: 4rem;
         color: v.$morado;
         position: relative;
         display: inline-block;
@@ -43,11 +44,17 @@
         color: v.$blanco;
         font-size: 3rem;
         text-align: center;
+        margin-top: 6rem;
     }
+
+    strong {
+        margin-bottom: 2rem;
+    }   
 
     p {
         text-align: center;
         max-width: 100rem;
+        margin-top: 2rem;
 
         @include m.tablet {
             text-align: justify
