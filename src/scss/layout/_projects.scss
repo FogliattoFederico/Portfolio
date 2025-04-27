@@ -31,7 +31,8 @@
     padding: 4rem;
     max-width: 1200px;
     margin: 0 auto;
-
+    justify-content: center;
+    align-items: center;
     @include m.tablet{
         grid-template-columns: repeat(2, 1fr);
     }

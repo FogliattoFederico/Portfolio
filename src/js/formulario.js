@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     const email = {
       email: "",
-      cc: "",
-      asunto: "",
-      mensaje: "",
+      name: "",
+      subject: "",
+      message: "",
     };
   
   
     //SELECCIONAR LOS ELEMENTOS DE LA INTERFAZ
     const inputEmail = document.querySelector("#email");
-    const inputAsunto = document.querySelector("#asunto");
-    const inputMensaje = document.querySelector("#mensaje");
-    const inputNombre = document.querySelector('#nombre')
+    const inputAsunto = document.querySelector("#subject");
+    const inputMensaje = document.querySelector("#message");
+    const inputNombre = document.querySelector('#name')
     const formulario = document.querySelector("#formulario");
     const btnSubmit = document.querySelector('#formulario button[type="submit"]');
     const btnReset = document.querySelector('#formulario button[type="reset"]');
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         
                               const alertaExito = document.createElement("P");
                               alertaExito.classList.add('alertaExito');
-                              alertaExito.textContent = "Mensaje enviado correctamente";
+                              alertaExito.textContent = "Message sended successfully!";
                               formulario.appendChild(alertaExito);
                         
                               setTimeout(() => {
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             }, 3000);
                           })
                           .catch((error) => {
-                              alert('Hubo un error al enviar el mensaje.')
+                              alert('There was an error sending the message, please try again later')
                               console.error('Error:', error)
                           })
   
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(e.target.value)
         if (e.target.value.trim() === "") {
           mostrarAlerta(
-            `El campo ${e.target.id} esta vacio`,
+            `The field ${e.target.id} is empty`,
             e.target.parentElement
           ); //se posiciona en el elemento padre
           email[e.target.name] = "";
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
   
       if (e.target.id === "email" && !validarEmail(e.target.value)) {
-        mostrarAlerta("El correo ingresado no es valido", e.target.parentElement);
+        mostrarAlerta("The email is not valid", e.target.parentElement);
         email[e.target.name] = "";
         comprobarEmail();
         return;
@@ -145,8 +145,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function resetFormulario() {
       //REINICIAR OBJETO
       email.email = "";
-      email.asunto = "";
-      email.mensaje = "";
+      email.subject = "";
+      email.message = "";
+      email.name = "";
   
       formulario.reset();
   

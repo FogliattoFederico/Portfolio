@@ -798,6 +798,8 @@ body > section {
   padding: 4rem;
   max-width: 1200px;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .projects-grid {
