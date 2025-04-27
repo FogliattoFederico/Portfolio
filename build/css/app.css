@@ -1345,7 +1345,7 @@ body > section {
 .footer {
   background-color: #000000;
   height: auto;
-  margin-top: 4rem;
+  margin-top: 8rem;
 }
 .footer ul {
   display: flex;
