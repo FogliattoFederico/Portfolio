@@ -1,0 +1,26 @@
+{
+  "name": "porfolio",
+  "version": "1.0.0",
+  "description": "Porfolio personal para mostrar mis proyectos y habilidades",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "css": "gulp css",
+    "dev": "gulp"
+  },
+  "keywords": [
+    "SASS",
+    "npm",
+    "gulp"
+  ],
+  "author": "Fogliatto Federico",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.86.0"
+  },
+  "dependencies": {
+    "gulp": "^5.0.0"
+  }
+}
