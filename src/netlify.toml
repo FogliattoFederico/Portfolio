@@ -1,0 +1,12 @@
+[build]
+  command = "npm install && gulp netlifyBuild"
+  publish = "build"
+
+[dev]
+  publish = "build"
+
+# Redirecciones para SPA si es necesario
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -5,9 +5,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch src/scss:build/css",
-    "css": "gulp css",
-    "dev": "gulp"
+    "dev": "gulp",
+    "build": "gulp build",
+    "netlify": "gulp netlifyBuild",
+    "clean": "gulp clean",
+    "test-build": "npm install && gulp netlifyBuild"
   },
   "keywords": [
     "SASS",
@@ -17,10 +19,8 @@
   "author": "Fogliatto Federico",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^5.0.0",
     "gulp-sass": "^6.0.1",
     "sass": "^1.86.0"
-  },
-  "dependencies": {
-    "gulp": "^5.0.0"
   }
 }
