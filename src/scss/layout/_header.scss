@@ -37,7 +37,7 @@
     display: flex;
     gap: 3rem;
     
-    @include m.deskstop{
+    @include m.desktop{
         gap: 5rem;
 
     }

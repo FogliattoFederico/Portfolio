@@ -14,7 +14,7 @@
         margin: 9rem auto;
     }
 
-    @include m.deskstop{
+    @include m.desktop{
         width: 45%;
         margin: 9 auto;
     }
@@ -48,7 +48,7 @@
                 margin: 0 auto;
  
              }
-             @include m.deskstop{
+             @include m.desktop{
                 width: 70%;
                 margin: 0 auto;
             }
@@ -63,7 +63,7 @@
                margin: 0 auto;
 
             }
-            @include m.deskstop{
+            @include m.desktop{
                 width: 70%;
                 margin: 0 auto;
             }
@@ -87,7 +87,7 @@
             margin: 0 auto;
             
          }
-         @include m.deskstop{
+         @include m.desktop{
              width: 70%;
              margin: 0 auto;
          }
@@ -134,7 +134,7 @@
     @include m.tablet{
         width: 90%;
     }
-    @include m.deskstop{
+    @include m.desktop{
         width: 70%;
     }
 }

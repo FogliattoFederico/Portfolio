@@ -36,7 +36,7 @@
 .tech-container {
     display: flex;
     animation: slide 20s linear infinite;
-    width: calc(200px * 18);
+    width: calc(220px * 16);
 
     &:hover {
         animation-play-state: paused;
@@ -84,7 +84,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-200px * 9));
+        transform: translateX(calc(-220px * 8));
     }
 }
 

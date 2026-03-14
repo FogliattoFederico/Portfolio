@@ -524,7 +524,7 @@ body > section {
 }
 
 .hero {
-  background-image: url("/src/img/portada.jpg");
+  background-image: url("../img/portada.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 80rem;
@@ -631,7 +631,7 @@ body > section {
 .tech-container {
   display: flex;
   animation: slide 20s linear infinite;
-  width: 3600px;
+  width: 3520px;
 }
 .tech-container:hover {
   animation-play-state: paused;
@@ -672,7 +672,7 @@ body > section {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1800px);
+    transform: translateX(-1760px);
   }
 }
 @media (max-width: 768px) {
